@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Luis Enrique Peñafiel Frias, estudiante de Ingeniería de Software enfocado en desarrollo backend y cloud.">
+    <title>Luis Peñafiel | Portafolio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="navbar__brand" href="index.html">Luis<span>.dev</span></a>
+            <ul class="navbar__menu" id="menu-principal">
+                <li><a class="navbar__link" href="#inicio">Inicio</a></li>
+                <li><a class="navbar__link" href="#sobre-mi">Sobre mí</a></li>
+                <li><a class="navbar__link" href="#habilidades">Habilidades</a></li>
+                <li><a class="navbar__link" href="#proyectos">Proyectos</a></li>
+                <li><a class="navbar__link" href="design-system.html">Design System</a></li>
+                <li><a class="navbar__link" href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+            <div class="hero__text">
+                <p class="hero__greeting">Hola, soy</p>
+                <h1 id="hero-titulo">Luis Enrique Peñafiel Frias</h1>
+                <p class="hero__role">Estudiante de Ingeniería de Software · Desarrollo Backend &amp; Cloud</p>
+                <p class="hero__summary">
+                    Desarrollo aplicaciones web con backends seguros, automatizo procesos
+                    operativos y despliego mis proyectos en la nube.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+                    <a class="btn btn--secondary" href="#contacto">Contactarme</a>
+                </div>
+            </div>
+            <figure class="hero__photo">
+                <img src="assets/img/perfil.jpg" alt="Fotografía de Luis Enrique Peñafiel Frias" width="231" height="293">
+            </figure>
+        </section>
+
+        <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+            <h2 class="section__title" id="sobre-mi-titulo">Sobre mí</h2>
+            <div class="about">
+                <div class="about__text">
+                    <p>
+                        Soy estudiante de 8.º semestre de Ingeniería de Software en la Universidad Estatal
+                        de Milagro. Me interesa el desarrollo backend, la seguridad de las aplicaciones y
+                        la infraestructura en la nube.
+                    </p>
+                    <p>
+                        Durante mis prácticas en EMOVIM-EP automaticé las notificaciones de deuda por correo y la
+                        consulta masiva de 15.000 registros al sistema de la ANT, además de configurar un
+                        servidor seguro con Cloudflare y autenticación JWT.
+                    </p>
+                </div>
+
+                <aside class="about__aside" aria-label="Datos académicos y profesionales">
+                    <article class="info-block">
+                        <h3>Formación académica</h3>
+                        <p><strong>Ingeniería de Software</strong></p>
+                        <p>Universidad Estatal de Milagro, Milagro – Guayas</p>
+                        <p class="text-muted">8.º semestre (en curso)</p>
+                    </article>
+
+                    <article class="info-block">
+                        <h3>Experiencia</h3>
+                        <p><strong>Practicante – TICs</strong></p>
+                        <p>EMOVIM-EP, Milagro</p>
+                        <p class="text-muted"><time datetime="2025-09">Sep. 2025</time> – <time datetime="2025-12">Dic. 2025</time></p>
+                    </article>
+
+                    <article class="info-block">
+                        <h3>Reconocimientos</h3>
+                        <ul class="info-block__list">
+                            <li>Reconocimiento al alto promedio académico – Primer semestre, UNEMI.</li>
+                            <li>AWS Academy Graduate – Introduction to Cloud, Semester 1.</li>
+                        </ul>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="habilidades" aria-labelledby="habilidades-titulo">
+            <h2 class="section__title" id="habilidades-titulo">Habilidades</h2>
+            <p class="section__intro">Tecnologías con las que trabajo, organizadas por categoría.</p>
+
+            <div class="skills">
+                <article class="skill-group">
+                    <h3 class="skill-group__title">Backend</h3>
+                    <ul class="skill-list">
+                        <li class="skill">
+                            <span class="skill__name">Python</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">Django</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">FastAPI</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <h3 class="skill-group__title">Bases de datos</h3>
+                    <ul class="skill-list">
+                        <li class="skill">
+                            <span class="skill__name">PostgreSQL</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">SQL Server</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <h3 class="skill-group__title">Frontend</h3>
+                    <ul class="skill-list">
+                        <li class="skill">
+                            <span class="skill__name">HTML · CSS</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">JavaScript</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <h3 class="skill-group__title">Cloud y herramientas</h3>
+                    <ul class="skill-list">
+                        <li class="skill">
+                            <span class="skill__name">AWS</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">Cloudflare</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">Docker</span>
+                        </li>
+                        <li class="skill">
+                            <span class="skill__name">Power BI</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="proyectos" aria-labelledby="proyectos-titulo">
+            <h2 class="section__title" id="proyectos-titulo">Proyectos destacados</h2>
+            <p class="section__intro">Proyectos personales y profesionales en los que he trabajado.</p>
+
+            <div class="projects">
+                <article class="card" data-tech="django python aws cloudflare">
+                    <figure class="card__media">
+                        <img src="assets/img/proyecto-red-social.svg" alt="Ilustración de la red social: perfiles, chat y notificaciones" width="640" height="360" loading="lazy" decoding="async">
+                        <figcaption class="visually-hidden">Red social desarrollada con Django</figcaption>
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="card__title">Red social</h3>
+                        <p class="card__desc">Sistema integral con autenticación, chat y notificaciones, alojado en AWS con dominio propio y Cloudflare.</p>
+                        <p class="card__problem"><strong>Problema:</strong> contar con una plataforma propia de comunicación entre usuarios, con registro seguro, mensajería y notificaciones, estable en producción con usuarios reales.</p>
+                        <ul class="card__tags" aria-label="Tecnologías">
+                            <li class="badge">Django</li>
+                            <li class="badge">Python</li>
+                            <li class="badge">AWS</li>
+                            <li class="badge">Cloudflare</li>
+                        </ul>
+                    </div>
+                    <footer class="card__footer">
+                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                    </footer>
+                </article>
+
+                <article class="card" data-tech="fastapi python aws">
+                    <figure class="card__media">
+                        <img src="assets/img/proyecto-nube.svg" alt="Ilustración de una nube con carpetas y archivos" width="640" height="360" loading="lazy" decoding="async">
+                        <figcaption class="visually-hidden">Nube de almacenamiento desarrollada con FastAPI</figcaption>
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="card__title">Nube de almacenamiento</h3>
+                        <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio.</p>
+                        <p class="card__problem"><strong>Problema:</strong> tener los archivos en un solo lugar accesible desde cualquier dispositivo sin depender de terceros.</p>
+                        <ul class="card__tags" aria-label="Tecnologías">
+                            <li class="badge">FastAPI</li>
+                            <li class="badge">Python</li>
+                            <li class="badge">AWS</li>
+                        </ul>
+                    </div>
+                    <footer class="card__footer">
+                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                    </footer>
+                </article>
+
+                <article class="card" data-tech="python">
+                    <figure class="card__media">
+                        <img src="assets/img/proyecto-automatizacion.svg" alt="Ilustración de un flujo automatizado de correos y registros" width="640" height="360" loading="lazy" decoding="async">
+                        <figcaption class="visually-hidden">Automatización de consultas y notificaciones</figcaption>
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="card__title">Automatización de consultas y notificaciones</h3>
+                        <p class="card__desc">Scripts que consultan 15.000 registros al sistema de la ANT y envían notificaciones de deuda por correo de forma automática.</p>
+                        <p class="card__problem"><strong>Problema:</strong> las consultas y avisos se hacían manualmente, lo que generaba una gran carga operativa.</p>
+                        <ul class="card__tags" aria-label="Tecnologías">
+                            <li class="badge">Python</li>
+                        </ul>
+                    </div>
+                    <footer class="card__footer">
+                        <p class="text-muted">Proyecto institucional (código privado)</p>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+            <h2 class="section__title" id="contacto-titulo">Contacto</h2>
+            <p class="section__intro">¿Tienes una oportunidad o un proyecto en mente? Escríbeme.</p>
+
+            <div class="contact">
+                <address class="contact__info">
+                    <p><strong>Correo:</strong> <a href="mailto:luis123master@gmail.com">luis123master@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">github.com/Luisst32</a></p>
+                </address>
+
+                <form class="form" id="form-contacto" action="mailto:luis123master@gmail.com" method="post" novalidate>
+                    <div class="form__field">
+                        <label class="form__label" for="nombre">Nombre</label>
+                        <input class="input" type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3">
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="email">Correo electrónico</label>
+                        <input class="input" type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="mensaje">Mensaje</label>
+                        <textarea class="input textarea" id="mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+                    </div>
+                    <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Luis Enrique Peñafiel Frias · Hecho con HTML, CSS y JavaScript</p>
+    </footer>
+</body>
+</html>
