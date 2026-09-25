@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design System del portafolio de Luis Enrique Peñafiel Frias: colores, tipografía, espaciado y componentes reutilizables.">
+    <title>Design System | Luis Peñafiel</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/design-system.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="navbar__brand" href="index.html">Luis<span>.dev</span></a>
+            <ul class="navbar__menu" id="menu-principal">
+                <li><a class="navbar__link" href="index.html#inicio">Inicio</a></li>
+                <li><a class="navbar__link" href="index.html#sobre-mi">Sobre mí</a></li>
+                <li><a class="navbar__link" href="index.html#habilidades">Habilidades</a></li>
+                <li><a class="navbar__link" href="index.html#proyectos">Proyectos</a></li>
+                <li><a class="navbar__link" href="design-system.html" aria-current="page">Design System</a></li>
+                <li><a class="navbar__link" href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="section ds-intro" aria-labelledby="ds-titulo">
+            <h1 id="ds-titulo">Design System</h1>
+            <p class="section__intro">
+                Decisiones visuales y componentes reutilizables del portafolio. Todos los valores
+                provienen de las variables definidas en <code>css/variables.css</code> y los componentes
+                mostrados son los mismos que se usan en el sitio.
+            </p>
+            <nav class="ds-toc" aria-label="Contenido del Design System">
+                <ul>
+                    <li><a class="badge" href="#colores">Colores</a></li>
+                    <li><a class="badge" href="#tipografia">Tipografía</a></li>
+                    <li><a class="badge" href="#espaciado">Espaciado</a></li>
+                    <li><a class="badge" href="#bordes-sombras">Bordes y sombras</a></li>
+                    <li><a class="badge" href="#componentes">Componentes</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="section" id="colores" aria-labelledby="colores-titulo">
+            <h2 class="section__title" id="colores-titulo">Colores</h2>
+            <ul class="swatches">
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--primary"></span>
+                    <p class="swatch__name">Primary</p>
+                    <code>--color-primary</code>
+                    <code>#2563eb</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--primary-hover"></span>
+                    <p class="swatch__name">Primary hover</p>
+                    <code>--color-primary-hover</code>
+                    <code>#1d4ed8</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--primary-soft"></span>
+                    <p class="swatch__name">Primary soft</p>
+                    <code>--color-primary-soft</code>
+                    <code>#eff6ff</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--secondary"></span>
+                    <p class="swatch__name">Secondary</p>
+                    <code>--color-secondary</code>
+                    <code>#7c3aed</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--accent"></span>
+                    <p class="swatch__name">Accent</p>
+                    <code>--color-accent</code>
+                    <code>#06b6d4</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--background"></span>
+                    <p class="swatch__name">Background</p>
+                    <code>--color-background</code>
+                    <code>#ffffff</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--surface"></span>
+                    <p class="swatch__name">Surface</p>
+                    <code>--color-surface</code>
+                    <code>#f8fafc</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--border"></span>
+                    <p class="swatch__name">Border</p>
+                    <code>--color-border</code>
+                    <code>#e2e8f0</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--text"></span>
+                    <p class="swatch__name">Text</p>
+                    <code>--color-text</code>
+                    <code>#0f172a</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--text-muted"></span>
+                    <p class="swatch__name">Text muted</p>
+                    <code>--color-text-muted</code>
+                    <code>#64748b</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--success"></span>
+                    <p class="swatch__name">Success</p>
+                    <code>--color-success</code>
+                    <code>#16a34a</code>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__color swatch__color--error"></span>
+                    <p class="swatch__name">Error</p>
+                    <code>--color-error</code>
+                    <code>#dc2626</code>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" id="tipografia" aria-labelledby="tipografia-titulo">
+            <h2 class="section__title" id="tipografia-titulo">Tipografía</h2>
+            <p class="section__intro">Fuente principal: <code>--font-primary</code> (Segoe UI, system-ui, Roboto, Arial, sans-serif).</p>
+            <dl class="ds-specimens">
+                <div class="ds-specimen">
+                    <dt><code>h1</code> · <code>--font-size-3xl</code> · bold</dt>
+                    <dd><p class="ds-h1">Luis Enrique Peñafiel Frias</p></dd>
+                </div>
+                <div class="ds-specimen">
+                    <dt><code>h2</code> · <code>--font-size-2xl</code> · bold</dt>
+                    <dd><p class="ds-h2">Proyectos destacados</p></dd>
+                </div>
+                <div class="ds-specimen">
+                    <dt><code>h3</code> · <code>--font-size-lg</code> · bold</dt>
+                    <dd><p class="ds-h3">Nube de almacenamiento</p></dd>
+                </div>
+                <div class="ds-specimen">
+                    <dt>Párrafo · <code>--font-size-base</code> · <code>--line-height-base</code></dt>
+                    <dd><p>Desarrollo aplicaciones web completas, desde interfaces responsive hasta backends seguros, y despliego mis proyectos en la nube.</p></dd>
+                </div>
+                <div class="ds-specimen">
+                    <dt>Texto secundario · <code>.text-muted</code></dt>
+                    <dd><p class="text-muted">8.º semestre (en curso)</p></dd>
+                </div>
+                <div class="ds-specimen">
+                    <dt>Enlace · <code>a</code></dt>
+                    <dd><p><a href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">github.com/Luisst32</a></p></dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="section" id="espaciado" aria-labelledby="espaciado-titulo">
+            <h2 class="section__title" id="espaciado-titulo">Espaciado</h2>
+            <p class="section__intro">Escala usada en márgenes, rellenos y separaciones entre elementos.</p>
+            <table class="ds-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Variable</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Muestra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--space-xs</code></td>
+                        <td>0.25rem (4px)</td>
+                        <td><span class="space-bar space-bar--xs"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-sm</code></td>
+                        <td>0.5rem (8px)</td>
+                        <td><span class="space-bar space-bar--sm"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-md</code></td>
+                        <td>1rem (16px)</td>
+                        <td><span class="space-bar space-bar--md"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-lg</code></td>
+                        <td>2rem (32px)</td>
+                        <td><span class="space-bar space-bar--lg"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-xl</code></td>
+                        <td>3rem (48px)</td>
+                        <td><span class="space-bar space-bar--xl"></span></td>
+                    </tr>
+                    <tr>
+                        <td><code>--space-2xl</code></td>
+                        <td>5rem (80px)</td>
+                        <td><span class="space-bar space-bar--2xl"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section" id="bordes-sombras" aria-labelledby="bordes-titulo">
+            <h2 class="section__title" id="bordes-titulo">Bordes y sombras</h2>
+            <ul class="ds-samples">
+                <li class="ds-sample ds-sample--radius-sm"><code>--radius-sm</code><span>0.5rem</span></li>
+                <li class="ds-sample ds-sample--radius-md"><code>--radius-md</code><span>1rem</span></li>
+                <li class="ds-sample ds-sample--radius-full"><code>--radius-full</code><span>999px</span></li>
+                <li class="ds-sample ds-sample--shadow-sm"><code>--shadow-sm</code><span>Encabezado</span></li>
+                <li class="ds-sample ds-sample--shadow-card"><code>--shadow-card</code><span>Cards</span></li>
+                <li class="ds-sample ds-sample--shadow-lg"><code>--shadow-lg</code><span>Hover y foto</span></li>
+            </ul>
+        </section>
+
+        <section class="section" id="componentes" aria-labelledby="componentes-titulo">
+            <h2 class="section__title" id="componentes-titulo">Componentes</h2>
+
+            <article class="ds-component">
+                <h3>Botones</h3>
+                <p class="text-muted">Clases <code>.btn</code>, <code>.btn--primary</code>, <code>.btn--secondary</code> y <code>.btn--sm</code>.</p>
+                <div class="ds-demo">
+                    <button class="btn btn--primary" type="button">Botón primario</button>
+                    <button class="btn btn--secondary" type="button">Botón secundario</button>
+                    <button class="btn btn--primary btn--sm" type="button">Primario pequeño</button>
+                    <button class="btn btn--secondary btn--sm" type="button">Secundario pequeño</button>
+                </div>
+            </article>
+
+            <article class="ds-component">
+                <h3>Badge</h3>
+                <p class="text-muted">Clase <code>.badge</code>. Se usa para las tecnologías de cada proyecto.</p>
+                <ul class="ds-demo">
+                    <li class="badge">Python</li>
+                    <li class="badge">Django</li>
+                    <li class="badge">AWS</li>
+                </ul>
+            </article>
+
+            <article class="ds-component">
+                <h3>Skill</h3>
+                <p class="text-muted">Clases <code>.skill-group</code>, <code>.skill-list</code> y <code>.skill</code>.</p>
+                <div class="ds-demo ds-demo--block">
+                    <article class="skill-group">
+                        <h4 class="skill-group__title">Backend</h4>
+                        <ul class="skill-list">
+                            <li class="skill">
+                                <img class="skill__icon" src="assets/icons/python.svg" alt="" width="40" height="40">
+                                <span class="skill__name">Python</span>
+                            </li>
+                            <li class="skill">
+                                <img class="skill__icon" src="assets/icons/django.svg" alt="" width="40" height="40">
+                                <span class="skill__name">Django</span>
+                            </li>
+                            <li class="skill">
+                                <img class="skill__icon" src="assets/icons/fastapi.svg" alt="" width="40" height="40">
+                                <span class="skill__name">FastAPI</span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </article>
+
+            <article class="ds-component">
+                <h3>Card de proyecto</h3>
+                <p class="text-muted">Clases <code>.card</code>, <code>.card__media</code>, <code>.card__body</code>, <code>.card__tags</code> y <code>.card__footer</code>.</p>
+                <div class="ds-demo ds-demo--card">
+                    <article class="card">
+                        <figure class="card__media">
+                            <img src="assets/img/captura-nube.webp" alt="Captura de CloudManager: vista Mi Unidad con archivos, barra de almacenamiento y botones para subir archivos y crear carpetas" width="800" height="450" loading="lazy" decoding="async">
+                            <figcaption class="visually-hidden">Ejemplo de card de proyecto</figcaption>
+                        </figure>
+                        <div class="card__body">
+                            <h4 class="card__title">Nube de almacenamiento</h4>
+                            <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio.</p>
+                            <p class="card__problem"><strong>Problema:</strong> tener los archivos en un solo lugar accesible desde cualquier dispositivo.</p>
+                            <ul class="card__tags" aria-label="Tecnologías">
+                                <li class="badge">FastAPI</li>
+                                <li class="badge">Python</li>
+                                <li class="badge">AWS</li>
+                            </ul>
+                        </div>
+                        <footer class="card__footer">
+                            <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32/upload_documents" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                        </footer>
+                    </article>
+                </div>
+            </article>
+
+            <article class="ds-component">
+                <h3>Bloque de información</h3>
+                <p class="text-muted">Clase <code>.info-block</code>. Se usa en la sección Sobre mí.</p>
+                <div class="ds-demo ds-demo--block">
+                    <article class="info-block">
+                        <h4 class="info-block__title">Formación académica</h4>
+                        <p><strong>Ingeniería de Software</strong></p>
+                        <p class="text-muted">8.º semestre (en curso)</p>
+                    </article>
+                </div>
+            </article>
+
+            <article class="ds-component">
+                <h3>Inputs y textarea</h3>
+                <p class="text-muted">Clases <code>.form</code>, <code>.form__field</code>, <code>.form__label</code>, <code>.input</code> y <code>.textarea</code>.</p>
+                <div class="ds-demo ds-demo--block">
+                    <form class="form" aria-label="Ejemplo de formulario">
+                        <div class="form__field">
+                            <label class="form__label" for="ds-nombre">Input de texto</label>
+                            <input class="input" type="text" id="ds-nombre" name="ds-nombre" placeholder="Escribe tu nombre">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="ds-email">Input de correo</label>
+                            <input class="input" type="email" id="ds-email" name="ds-email" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="ds-mensaje">Textarea</label>
+                            <textarea class="input textarea" id="ds-mensaje" name="ds-mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </article>
+
+            <article class="ds-component">
+                <h3>Navbar</h3>
+                <p class="text-muted">Clases <code>.navbar</code>, <code>.navbar__brand</code>, <code>.navbar__menu</code> y <code>.navbar__link</code>. El enlace activo usa <code>aria-current="page"</code>.</p>
+                <div class="ds-demo ds-demo--block ds-demo--navbar">
+                    <nav class="navbar" aria-label="Ejemplo de navbar">
+                        <a class="navbar__brand" href="index.html">Luis<span>.dev</span></a>
+                        <ul class="navbar__menu">
+                            <li><a class="navbar__link" href="index.html#inicio">Inicio</a></li>
+                            <li><a class="navbar__link" href="index.html#proyectos">Proyectos</a></li>
+                            <li><a class="navbar__link" href="design-system.html" aria-current="page">Design System</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Luis Enrique Peñafiel Frias · Hecho con HTML, CSS y JavaScript</p>
+    </footer>
+</body>
+</html>

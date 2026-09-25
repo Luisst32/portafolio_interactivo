@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Luis Enrique Peñafiel Frias, estudiante de Ingeniería de Software enfocado en desarrollo backend y cloud.">
+    <meta name="description" content="Portafolio de Luis Enrique Peñafiel Frias, estudiante de Ingeniería de Software enfocado en desarrollo web frontend, backend y cloud.">
     <title>Luis Peñafiel | Portafolio</title>
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -30,10 +32,10 @@
             <div class="hero__text">
                 <p class="hero__greeting">Hola, soy</p>
                 <h1 id="hero-titulo">Luis Enrique Peñafiel Frias</h1>
-                <p class="hero__role">Estudiante de Ingeniería de Software · Desarrollo Backend &amp; Cloud</p>
+                <p class="hero__role">Estudiante de Ingeniería de Software · Desarrollo Frontend &amp; Backend</p>
                 <p class="hero__summary">
-                    Desarrollo aplicaciones web con backends seguros, automatizo procesos
-                    operativos y despliego mis proyectos en la nube.
+                    Desarrollo aplicaciones web completas, desde interfaces responsive hasta
+                    backends seguros, y despliego mis proyectos en la nube.
                 </p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
@@ -51,33 +53,28 @@
                 <div class="about__text">
                     <p>
                         Soy estudiante de 8.º semestre de Ingeniería de Software en la Universidad Estatal
-                        de Milagro. Me interesa el desarrollo backend, la seguridad de las aplicaciones y
-                        la infraestructura en la nube.
-                    </p>
-                    <p>
-                        Durante mis prácticas en EMOVIM-EP automaticé las notificaciones de deuda por correo y la
-                        consulta masiva de 15.000 registros al sistema de la ANT, además de configurar un
-                        servidor seguro con Cloudflare y autenticación JWT.
+                        de Milagro. Me interesa el desarrollo frontend y backend, la seguridad de las
+                        aplicaciones y la infraestructura en la nube.
                     </p>
                 </div>
 
                 <aside class="about__aside" aria-label="Datos académicos y profesionales">
                     <article class="info-block">
-                        <h3>Formación académica</h3>
+                        <h3 class="info-block__title">Formación académica</h3>
                         <p><strong>Ingeniería de Software</strong></p>
                         <p>Universidad Estatal de Milagro, Milagro – Guayas</p>
                         <p class="text-muted">8.º semestre (en curso)</p>
                     </article>
 
                     <article class="info-block">
-                        <h3>Experiencia</h3>
+                        <h3 class="info-block__title">Experiencia</h3>
                         <p><strong>Practicante – TICs</strong></p>
                         <p>EMOVIM-EP, Milagro</p>
                         <p class="text-muted"><time datetime="2025-09">Sep. 2025</time> – <time datetime="2025-12">Dic. 2025</time></p>
                     </article>
 
                     <article class="info-block">
-                        <h3>Reconocimientos</h3>
+                        <h3 class="info-block__title">Reconocimientos</h3>
                         <ul class="info-block__list">
                             <li>Reconocimiento al alto promedio académico – Primer semestre, UNEMI.</li>
                             <li>AWS Academy Graduate – Introduction to Cloud, Semester 1.</li>
@@ -96,12 +93,15 @@
                     <h3 class="skill-group__title">Backend</h3>
                     <ul class="skill-list">
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/python.svg" alt="" width="40" height="40">
                             <span class="skill__name">Python</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/django.svg" alt="" width="40" height="40">
                             <span class="skill__name">Django</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/fastapi.svg" alt="" width="40" height="40">
                             <span class="skill__name">FastAPI</span>
                         </li>
                     </ul>
@@ -111,9 +111,11 @@
                     <h3 class="skill-group__title">Bases de datos</h3>
                     <ul class="skill-list">
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/postgresql.svg" alt="" width="40" height="40">
                             <span class="skill__name">PostgreSQL</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/sqlserver.svg" alt="" width="40" height="40">
                             <span class="skill__name">SQL Server</span>
                         </li>
                     </ul>
@@ -123,9 +125,15 @@
                     <h3 class="skill-group__title">Frontend</h3>
                     <ul class="skill-list">
                         <li class="skill">
-                            <span class="skill__name">HTML · CSS</span>
+                            <img class="skill__icon" src="assets/icons/html5.svg" alt="" width="40" height="40">
+                            <span class="skill__name">HTML5</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/css3.svg" alt="" width="40" height="40">
+                            <span class="skill__name">CSS3</span>
+                        </li>
+                        <li class="skill">
+                            <img class="skill__icon" src="assets/icons/javascript.svg" alt="" width="40" height="40">
                             <span class="skill__name">JavaScript</span>
                         </li>
                     </ul>
@@ -135,15 +143,19 @@
                     <h3 class="skill-group__title">Cloud y herramientas</h3>
                     <ul class="skill-list">
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/aws.svg" alt="" width="40" height="40">
                             <span class="skill__name">AWS</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/cloudflare.svg" alt="" width="40" height="40">
                             <span class="skill__name">Cloudflare</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/docker.svg" alt="" width="40" height="40">
                             <span class="skill__name">Docker</span>
                         </li>
                         <li class="skill">
+                            <img class="skill__icon" src="assets/icons/powerbi.svg" alt="" width="40" height="40">
                             <span class="skill__name">Power BI</span>
                         </li>
                     </ul>
@@ -158,7 +170,7 @@
             <div class="projects">
                 <article class="card" data-tech="django python aws cloudflare">
                     <figure class="card__media">
-                        <img src="assets/img/proyecto-red-social.svg" alt="Ilustración de la red social: perfiles, chat y notificaciones" width="640" height="360" loading="lazy" decoding="async">
+                        <img src="assets/img/captura-red-social.webp" alt="Captura de la red social Milanesa: feed con una publicación, menú lateral y sugerencias de usuarios a seguir" width="1144" height="644" loading="lazy" decoding="async">
                         <figcaption class="visually-hidden">Red social desarrollada con Django</figcaption>
                     </figure>
                     <div class="card__body">
@@ -173,13 +185,13 @@
                         </ul>
                     </div>
                     <footer class="card__footer">
-                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32/web-django" target="_blank" rel="noopener noreferrer">Repositorio</a>
                     </footer>
                 </article>
 
                 <article class="card" data-tech="fastapi python aws">
                     <figure class="card__media">
-                        <img src="assets/img/proyecto-nube.svg" alt="Ilustración de una nube con carpetas y archivos" width="640" height="360" loading="lazy" decoding="async">
+                        <img src="assets/img/captura-nube.webp" alt="Captura de CloudManager: vista Mi Unidad con archivos, barra de almacenamiento y botones para subir archivos y crear carpetas" width="800" height="450" loading="lazy" decoding="async">
                         <figcaption class="visually-hidden">Nube de almacenamiento desarrollada con FastAPI</figcaption>
                     </figure>
                     <div class="card__body">
@@ -193,7 +205,7 @@
                         </ul>
                     </div>
                     <footer class="card__footer">
-                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                        <a class="btn btn--secondary btn--sm" href="https://github.com/Luisst32/upload_documents" target="_blank" rel="noopener noreferrer">Repositorio</a>
                     </footer>
                 </article>
 

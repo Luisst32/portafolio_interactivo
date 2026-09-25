@@ -16,6 +16,16 @@ Antes de maquetar se definió la distribución de las secciones en escritorio y 
 
 ![Boceto del portafolio](docs/boceto.svg)
 
+## Diseño responsive
+
+El CSS sigue un enfoque *mobile first* con dos puntos de quiebre:
+
+| Dispositivo | Ancho | Distribución |
+|---|---|---|
+| Teléfono | menos de 640px | Una columna |
+| Tablet | desde 640px (`40rem`) | Habilidades y proyectos en 2 columnas |
+| Computadora | desde 1024px (`64rem`) | Inicio en 2 columnas y proyectos en 3 |
+
 ## Estructura del proyecto
 
 ```
@@ -23,7 +33,11 @@ index.html            Página principal (Inicio, Sobre mí, Habilidades, Proyect
 design-system.html    Documentación del sistema visual y componentes
 css/variables.css     Design tokens (colores, tipografía, espaciado, radios, sombras)
 css/base.css          Reset, tipografía y utilidades
-assets/img/           Fotografía e ilustraciones de proyectos (SVG livianos)
+css/layout.css        Estructura de secciones, grids y media queries
+css/components.css    Componentes reutilizables (navbar, botones, badge, skill, card, formulario)
+css/design-system.css Estilos propios de la página Design System
+assets/img/           Fotografía, capturas de proyectos (WebP) e ilustración (SVG)
+assets/icons/         Logos de tecnologías (Devicon, licencia MIT)
 docs/                 Boceto y capturas del resultado
 ```
 
@@ -47,5 +61,5 @@ está excluido del repositorio mediante `.gitignore`.
 ## Avance
 
 - [x] Parte 1: boceto, estructura HTML semántica, contenido y design tokens
-- [ ] Parte 2: componentes CSS, layout responsive y página Design System
+- [x] Parte 2: componentes CSS, layout responsive y página Design System
 - [ ] Parte 3: interactividad con JavaScript, pruebas, capturas y publicación
