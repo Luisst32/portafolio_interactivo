@@ -183,6 +183,10 @@
     width: 100%;
 }
 
+.ds-contact {
+    max-width: 22rem;
+}
+
 @media (max-width: 39.99rem) {
     .ds-demo {
         padding: var(--space-md);

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/design-system.css">
+    <script src="js/theme.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -17,6 +19,15 @@
     <header class="site-header">
         <nav class="navbar" aria-label="Navegación principal">
             <a class="navbar__brand" href="index.html">Luis<span>.dev</span></a>
+            <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Activar tema oscuro">
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+            </button>
+            <button class="navbar__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
             <ul class="navbar__menu" id="menu-principal">
                 <li><a class="navbar__link" href="index.html#inicio">Inicio</a></li>
                 <li><a class="navbar__link" href="index.html#sobre-mi">Sobre mí</a></li>
@@ -49,6 +60,7 @@
 
         <section class="section" id="colores" aria-labelledby="colores-titulo">
             <h2 class="section__title" id="colores-titulo">Colores</h2>
+            <p class="section__intro">Valores del tema claro. El tema oscuro redefine estas mismas variables en <code>css/variables.css</code>.</p>
             <ul class="swatches">
                 <li class="swatch">
                     <span class="swatch__color swatch__color--primary"></span>
@@ -228,6 +240,18 @@
                 </div>
             </article>
 
+
+            <article class="ds-component">
+                <h3>Cambio de tema</h3>
+                <p class="text-muted">Clase <code>.theme-toggle</code>. El tema elegido se guarda en <code>localStorage</code>.</p>
+                <div class="ds-demo">
+                    <span class="theme-toggle" aria-hidden="true">
+                        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+                    </span>
+                </div>
+            </article>
+
             <article class="ds-component">
                 <h3>Badge</h3>
                 <p class="text-muted">Clase <code>.badge</code>. Se usa para las tecnologías de cada proyecto.</p>
@@ -273,12 +297,13 @@
                         </figure>
                         <div class="card__body">
                             <h4 class="card__title">Nube de almacenamiento</h4>
-                            <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio.</p>
+                            <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio y Cloudflare.</p>
                             <p class="card__problem"><strong>Problema:</strong> tener los archivos en un solo lugar accesible desde cualquier dispositivo.</p>
                             <ul class="card__tags" aria-label="Tecnologías">
                                 <li class="badge">FastAPI</li>
                                 <li class="badge">Python</li>
                                 <li class="badge">AWS</li>
+                                <li class="badge">Cloudflare</li>
                             </ul>
                         </div>
                         <footer class="card__footer">
@@ -301,6 +326,18 @@
             </article>
 
             <article class="ds-component">
+                <h3>Tarjeta de contacto</h3>
+                <p class="text-muted">Clase <code>.contact-card</code>. Se usa en la sección Contacto.</p>
+                <div class="ds-demo ds-demo--block">
+                    <a class="contact-card ds-contact" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">
+                        <img class="contact-card__icon" src="assets/icons/github.svg" alt="" width="40" height="40">
+                        <span class="contact-card__label">GitHub</span>
+                        <span class="contact-card__value">github.com/Luisst32</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="ds-component">
                 <h3>Inputs y textarea</h3>
                 <p class="text-muted">Clases <code>.form</code>, <code>.form__field</code>, <code>.form__label</code>, <code>.input</code> y <code>.textarea</code>.</p>
                 <div class="ds-demo ds-demo--block">
@@ -317,6 +354,13 @@
                             <label class="form__label" for="ds-mensaje">Textarea</label>
                             <textarea class="input textarea" id="ds-mensaje" name="ds-mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
                         </div>
+                        <div class="form__field">
+                            <label class="form__label" for="ds-error">Input con error</label>
+                            <input class="input is-invalid" type="email" id="ds-error" name="ds-error" value="correo-invalido" aria-invalid="true" aria-describedby="ds-error-msg">
+                            <p class="form__error" id="ds-error-msg">Ingresa un correo electrónico válido.</p>
+                        </div>
+                        <p class="form__status form__status--success">¡Gracias! Tu mensaje fue enviado. Te responderé pronto.</p>
+                        <p class="form__status form__status--error">No se pudo enviar el mensaje. Inténtalo de nuevo.</p>
                     </form>
                 </div>
             </article>
@@ -337,6 +381,7 @@
             </article>
         </section>
     </main>
+
 
     <footer class="site-footer">
         <p>&copy; 2026 Luis Enrique Peñafiel Frias · Hecho con HTML, CSS y JavaScript</p>

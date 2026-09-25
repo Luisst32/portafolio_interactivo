@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
+    <script src="js/theme.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -16,6 +18,15 @@
     <header class="site-header">
         <nav class="navbar" aria-label="Navegación principal">
             <a class="navbar__brand" href="index.html">Luis<span>.dev</span></a>
+            <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Activar tema oscuro">
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+            </button>
+            <button class="navbar__toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
             <ul class="navbar__menu" id="menu-principal">
                 <li><a class="navbar__link" href="#inicio">Inicio</a></li>
                 <li><a class="navbar__link" href="#sobre-mi">Sobre mí</a></li>
@@ -167,8 +178,9 @@
             <h2 class="section__title" id="proyectos-titulo">Proyectos destacados</h2>
             <p class="section__intro">Proyectos personales y profesionales en los que he trabajado.</p>
 
+
             <div class="projects">
-                <article class="card" data-tech="django python aws cloudflare">
+                <article class="card">
                     <figure class="card__media">
                         <img src="assets/img/captura-red-social.webp" alt="Captura de la red social Milanesa: feed con una publicación, menú lateral y sugerencias de usuarios a seguir" width="1144" height="644" loading="lazy" decoding="async">
                         <figcaption class="visually-hidden">Red social desarrollada con Django</figcaption>
@@ -189,19 +201,20 @@
                     </footer>
                 </article>
 
-                <article class="card" data-tech="fastapi python aws">
+                <article class="card">
                     <figure class="card__media">
                         <img src="assets/img/captura-nube.webp" alt="Captura de CloudManager: vista Mi Unidad con archivos, barra de almacenamiento y botones para subir archivos y crear carpetas" width="800" height="450" loading="lazy" decoding="async">
                         <figcaption class="visually-hidden">Nube de almacenamiento desarrollada con FastAPI</figcaption>
                     </figure>
                     <div class="card__body">
                         <h3 class="card__title">Nube de almacenamiento</h3>
-                        <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio.</p>
+                        <p class="card__desc">Servicio de almacenamiento centralizado en la nube, alojado en AWS bajo dominio propio y Cloudflare.</p>
                         <p class="card__problem"><strong>Problema:</strong> tener los archivos en un solo lugar accesible desde cualquier dispositivo sin depender de terceros.</p>
                         <ul class="card__tags" aria-label="Tecnologías">
                             <li class="badge">FastAPI</li>
                             <li class="badge">Python</li>
                             <li class="badge">AWS</li>
+                            <li class="badge">Cloudflare</li>
                         </ul>
                     </div>
                     <footer class="card__footer">
@@ -209,7 +222,7 @@
                     </footer>
                 </article>
 
-                <article class="card" data-tech="python">
+                <article class="card">
                     <figure class="card__media">
                         <img src="assets/img/proyecto-automatizacion.svg" alt="Ilustración de un flujo automatizado de correos y registros" width="640" height="360" loading="lazy" decoding="async">
                         <figcaption class="visually-hidden">Automatización de consultas y notificaciones</figcaption>
@@ -235,28 +248,44 @@
 
             <div class="contact">
                 <address class="contact__info">
-                    <p><strong>Correo:</strong> <a href="mailto:luis123master@gmail.com">luis123master@gmail.com</a></p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">github.com/Luisst32</a></p>
+                    <a class="contact-card" href="mailto:luis123master@gmail.com">
+                        <img class="contact-card__icon" src="assets/icons/correo.svg" alt="" width="40" height="40">
+                        <span class="contact-card__label">Correo</span>
+                        <span class="contact-card__value">luis123master@gmail.com</span>
+                    </a>
+                    <a class="contact-card" href="https://github.com/Luisst32" target="_blank" rel="noopener noreferrer">
+                        <img class="contact-card__icon" src="assets/icons/github.svg" alt="" width="40" height="40">
+                        <span class="contact-card__label">GitHub</span>
+                        <span class="contact-card__value">github.com/Luisst32</span>
+                    </a>
                 </address>
 
-                <form class="form" id="form-contacto" action="mailto:luis123master@gmail.com" method="post" novalidate>
+                <form class="form" id="form-contacto" action="https://formsubmit.co/luis123master@gmail.com" method="post" novalidate>
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                    <input type="hidden" name="_template" value="table">
+                    <input class="form__honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form__field">
                         <label class="form__label" for="nombre">Nombre</label>
-                        <input class="input" type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3">
+                        <input class="input" type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3" aria-describedby="nombre-error">
+                        <p class="form__error" id="nombre-error"></p>
                     </div>
                     <div class="form__field">
                         <label class="form__label" for="email">Correo electrónico</label>
-                        <input class="input" type="email" id="email" name="email" autocomplete="email" required>
+                        <input class="input" type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                        <p class="form__error" id="email-error"></p>
                     </div>
                     <div class="form__field">
                         <label class="form__label" for="mensaje">Mensaje</label>
-                        <textarea class="input textarea" id="mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+                        <textarea class="input textarea" id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="mensaje-error"></textarea>
+                        <p class="form__error" id="mensaje-error"></p>
                     </div>
                     <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+                    <p class="form__status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
+
 
     <footer class="site-footer">
         <p>&copy; 2026 Luis Enrique Peñafiel Frias · Hecho con HTML, CSS y JavaScript</p>
